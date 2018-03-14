@@ -1,0 +1,19 @@
+import os
+group = []
+students = []
+# Путь к существующим файлам
+p1 = "D:\\Untitled\\Входящие"
+# Путь к будущим файлам
+p2 = "D:\Группы"
+# Список файлов и папок в папке.
+vr = os.listdir(p1)
+try:
+    os.makedirs(p2)
+except os.error:
+    print ("Невозможно создать папку")
+#for i in os.listdir():
+#    if
+
+
+
+
