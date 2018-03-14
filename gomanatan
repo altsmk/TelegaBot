@@ -1,0 +1,33 @@
+import os
+
+# Путь к существующим файлам
+p1 = "D:\\Untitled\\Входящие"
+# Путь к будущим файлам
+p2 = "D:\Группы"
+# Список файлов и папок в папке.
+vr = os.listdir(p1)
+try:
+    os.makedirs(p2)
+except os.error:
+    print ("Невозможно создать папку")
+# Проходим по названиям папок
+group = []
+for i in os.listdir(p1):
+    print(i)
+    # Обрезание до символа _
+    ob = i[i.index("_")+1:]
+    print(ob)
+    group.append(ob)
+# Удаляет повторения из массива
+group = list(set(group))
+# Создаются папки
+try:
+    os.mkdir("D://untitled/ПМИ-17")
+except os.error:
+    print ("Невозможно создать папку")
+try:
+    os.mkdir("D://untitled/ПМИ-16")
+except os.error:
+    print("Невозможно создать папку")
+
+
